@@ -103,7 +103,16 @@ cursor: pointer;
 .client-roster:hover,
 .client-roster:focus {
    width: 370px;
-   
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.client-roster {
+   position: relative;
+}
+
+.client-roster:hover .client-text {
+   opacity: 1;
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .portfolio-link {
@@ -186,6 +195,7 @@ cursor: pointer;
 .contacts:hover .contacts-envelope,
 .contacts:focus .contacts-envelope{
    fill: var(--hero-background-hover-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .contacts-phone {
@@ -198,6 +208,7 @@ cursor: pointer;
 .contacts:hover .contacts-phone,
 .contacts:focus .contacts-phone{
    fill: var(--hero-background-hover-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .nav-link {
@@ -256,6 +267,17 @@ margin-top: 0;
    position: relative;
 }
 
+.specifics-title-div {
+   position: absolute;
+   background-color: rgba(47, 48, 58, 0.8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 370px;
+   height: 70px;
+   bottom: 0;
+}
+
 .client-div {
    position: relative;}
 
@@ -266,19 +288,31 @@ margin-top: 0;
    font-size: 14px;
    line-height: 1.17;
    text-transform: uppercase;
-   background-color: rgba(47, 48, 58, 0.8);
-   width: 370px;
-   height: 70px;
+
    text-align: center;
    letter-spacing: 0.03em;
 
    position: absolute;
    color: var(--hero-title-color);
-   bottom: 0;
-   justify-content: center;
-   position: absolute;
-   vertical-align: middle;
+  
+}
 
+.box::before {
+   content: '';
+   position: absolute;
+   position: relative;
+}
+
+.box:hover .overlay {
+   position: absolute;
+   width: 370px;
+   height: 294px;
+   left: 0;
+   bottom: 0;
+   transform: translateY(100%);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   background: rgba(33, 150, 243, 0.9);
 }
    
 .client-text {
@@ -287,16 +321,15 @@ margin-top: 0;
    font-size: 18px;
    line-height: 1.56;
    
-   background-color:  rgba(33, 150, 243, 0.9);;
-   width: 370px;
-   height: 294px;
+   
    text-align: left;
    letter-spacing: 0.03em;
    opacity: 0;
-
+   
 
    color: var(--hero-title-color);
    top: 0;
+   left: 0;
    position: absolute;
    vertical-align: middle;
    padding-top: 63px;
@@ -326,6 +359,7 @@ gap: 30px;
 .footer-contacts:hover,
 .footer-contacts:focus {
    color: var(--accent-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .features-title {
@@ -462,6 +496,7 @@ background-color:rgba(255, 255, 255, 0.1);
    border-radius: 50%;
    background-color: var(--accent-color);
    fill: var(--hero-title-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .list-icon:hover,
@@ -474,6 +509,7 @@ background-color:rgba(255, 255, 255, 0.1);
    display: flex;
    align-items: center;
    justify-content: center;
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 
@@ -495,7 +531,7 @@ background-color:rgba(255, 255, 255, 0.1);
 .link-client:focus {
    fill: #2196F3;
    border: 1px solid #2196F3;
-
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .client-icon {
    width: 106px;
@@ -505,15 +541,13 @@ background-color:rgba(255, 255, 255, 0.1);
 .link-icon:hover .icon,
 .link-icon:focus .icon{
    fill: #ffffff;
-   background-color: var(--accent-color);
-   border: 1px solid #2196F3;
-   width: 20px;
-   height:20px;
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .link-icon:hover ,
 .link-icon:focus {
    background-color: var(--accent-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .section-title-client {
@@ -544,6 +578,7 @@ background-color:rgba(255, 255, 255, 0.1);
    color: var(--hero-title-color);
    background-color: var(--accent-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .button-filter {
@@ -678,7 +713,8 @@ padding: 0 15px;
 .hero-button:hover,
 .hero-button:focus {
    color: var(--hero-title-color);
-   background-color:var(--hero-background-hover-color) ;
+   background-color:var(--hero-background-hover-color);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .section-backgroung {
@@ -696,6 +732,13 @@ padding: 0 15px;
    width: 100%;
    height: 100%;
    background-color:rgba(0, 0, 0, 0.1);
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
 }
 
 .modal {
