@@ -295,11 +295,9 @@ margin-top: 0;
 }
 
 .box {
-   position: absolute;
    transform: translateY(0);
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  
 }
 
 .box::before {
@@ -310,13 +308,12 @@ margin-top: 0;
    width: 370px;
    height: 294px;
    bottom: 0;
-   opacity: 0;
+   opacity: 1;
    
 }
 
 .box:hover ::before
 .box:focus ::before {
-   
    opacity: 1;
 }
 
