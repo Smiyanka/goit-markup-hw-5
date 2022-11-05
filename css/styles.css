@@ -106,9 +106,6 @@ cursor: pointer;
   
 }
 
-.client-roster {
-   position: relative;
-}
 
 .client-roster:hover .client-text {
    opacity: 1;
@@ -298,28 +295,37 @@ margin-top: 0;
 }
 
 .box {
-   position: relative;
+   position: absolute;
    transform: translateY(0);
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  
 }
 
 .box::before {
+   display: inline-block;
    content: '';
    position: absolute;
+   background: rgba(33, 150, 243, 0.9);
+   width: 370px;
+   height: 294px;
+   bottom: 0;
+   opacity: 0;
+   
+}
 
+.box:hover ::before
+.box:focus ::before {
+   
+   opacity: 1;
 }
 
 .box:hover .overlay
 .box:focus .overlay {
 
    position: absolute;
-   width: 370px;
-   height: 294px;
-   left: 0;
-   bottom: 0;
    transform: translateY(-100%);
   
-   background: rgba(33, 150, 243, 0.9);
 }
    
 .client-text {
@@ -333,14 +339,14 @@ margin-top: 0;
    letter-spacing: 0.03em;
    opacity: 0;
    
-
    color: var(--hero-title-color);
-   top: 0;
+   bottom: 0;
    left: 0;
    position: absolute;
    padding-top: 63px;
    padding-right: 24px;
    padding-left: 24px;
+   width: 370px;
 }
 
 
@@ -536,7 +542,7 @@ background-color:rgba(255, 255, 255, 0.1);
 .link-client:hover,
 .link-client:focus {
    fill: #2196F3;
-   border: 1px solid #2196F3;
+   border: 1px solid #2196F3;}
   
 .client-icon {
    width: 106px;
@@ -583,7 +589,7 @@ background-color:rgba(255, 255, 255, 0.1);
    color: var(--hero-title-color);
    background-color: var(--accent-color);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   
 }
 
 .button-filter {
@@ -713,14 +719,15 @@ padding: 0 15px;
 
    background-color: var(--accent-color);
    border: none;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .hero-button:hover,
 .hero-button:focus {
    color: var(--hero-title-color);
    background-color:var(--hero-background-hover-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
+   
 
 .section-backgroung {
    background-color: var(--team-background-color);
