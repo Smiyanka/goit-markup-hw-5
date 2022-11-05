@@ -103,7 +103,7 @@ cursor: pointer;
 .client-roster:hover,
 .client-roster:focus {
    width: 370px;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  
 }
 
 .client-roster {
@@ -112,7 +112,7 @@ cursor: pointer;
 
 .client-roster:hover .client-text {
    opacity: 1;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  
 }
 
 .portfolio-link {
@@ -195,7 +195,7 @@ cursor: pointer;
 .contacts:hover .contacts-envelope,
 .contacts:focus .contacts-envelope{
    fill: var(--hero-background-hover-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  
 }
 
 .contacts-phone {
@@ -208,7 +208,7 @@ cursor: pointer;
 .contacts:hover .contacts-phone,
 .contacts:focus .contacts-phone{
    fill: var(--hero-background-hover-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   
 }
 
 .nav-link {
@@ -297,21 +297,28 @@ margin-top: 0;
   
 }
 
+.box {
+   position: relative;
+   transform: translateY(0);
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .box::before {
    content: '';
    position: absolute;
-   position: relative;
+
 }
 
-.box:hover .overlay {
+.box:hover .overlay
+.box:focus .overlay {
+
    position: absolute;
    width: 370px;
    height: 294px;
    left: 0;
    bottom: 0;
    transform: translateY(-100%);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  
    background: rgba(33, 150, 243, 0.9);
 }
    
@@ -331,7 +338,6 @@ margin-top: 0;
    top: 0;
    left: 0;
    position: absolute;
-   vertical-align: middle;
    padding-top: 63px;
    padding-right: 24px;
    padding-left: 24px;
@@ -359,7 +365,7 @@ gap: 30px;
 .footer-contacts:hover,
 .footer-contacts:focus {
    color: var(--accent-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  
 }
 
 .features-title {
@@ -496,7 +502,7 @@ background-color:rgba(255, 255, 255, 0.1);
    border-radius: 50%;
    background-color: var(--accent-color);
    fill: var(--hero-title-color);
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   
 }
 
 .list-icon:hover,
@@ -509,7 +515,7 @@ background-color:rgba(255, 255, 255, 0.1);
    display: flex;
    align-items: center;
    justify-content: center;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   
 }
 
 
@@ -531,8 +537,7 @@ background-color:rgba(255, 255, 255, 0.1);
 .link-client:focus {
    fill: #2196F3;
    border: 1px solid #2196F3;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
-}
+  
 .client-icon {
    width: 106px;
    height: 60px;
@@ -541,7 +546,7 @@ background-color:rgba(255, 255, 255, 0.1);
 .link-icon:hover .icon,
 .link-icon:focus .icon{
    fill: #ffffff;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+   
 }
 
 .link-icon:hover ,
